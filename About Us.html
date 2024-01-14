@@ -1,231 +1,157 @@
-2<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Safai Academy</title>
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./globalStyles.css">
-    <link rel="stylesheet" href="./components.css">
-    <!-- aos css -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" href="./home.css">
+<style>
 
-  </head>
+@import url(https://fonts.googleapis.com/css?family=Orbitron:700);
+#space, .stars {
+overflow: hidden;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+} 
 
+.stars { background-image: 
+radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+radial-gradient(2px 2px at 50px 160px, #eee, rgba(0,0,0,0)),
+radial-gradient(2px 2px at 90px 40px, #eee, rgba(0,0,0,0)),
+radial-gradient(2px 2px at 130px 80px, #eee, rgba(0,0,0,0)),
+radial-gradient(2px 2px at 160px 120px, #eee, rgba(0,0,0,0));
+background-repeat: repeat;
+background-size: 200px 200px;
+animation: zoom 5s infinite;
+opacity: 0;
+} 
+
+.stars:nth-child(1) {
+background-position: 50% 50% ;
+animation-delay: 0s;
+} 
+
+.stars:nth-child(2) {
+background-position: 20% 60%;
+animation-delay: 1s;
+} 
+
+.stars:nth-child(3) {
+background-position: -20% -30%;
+animation-delay: 2s;
+} 
+
+.stars:nth-child(4) {
+background-position: 40% -80%;
+animation-delay: 3s;
+} 
+
+.stars:nth-child(5) {
+background-position: -20% 30%;
+animation-delay: 4s;
+} 
+
+@keyframes zoom {
+0% {
+opacity: 0;
+transform: scale(0.5);
+animation-timing-function:ease-in;
+}
+85% {
+opacity: 1;
+transform: scale(2.8);
+animation-timing-function: linear;
+}
+100% {
+opacity: 0;
+transform: scale(3.5);
+}
+} 
+
+body {
+background: #000;
+font-family: 'orbitron', sans-serif;
+} 
+
+h1 {
+position: absolute;
+z-index: 1;
+top: 50%;
+left: 50%;
+margin: -1.5em -2.5em;
+width: 5em;
+color: #011;
+font-size: 5em;
+text-align: center;
+text-shadow: 0 0 3px #6cf;
+}
+h1:first-line {
+font-size: 200%;
+} 
+
+/* Properly close the <style> tag */
+</style>
+</head>
 <body>
-<!--Nav Section-->
-<div class="nav">
-    <div class="container">
-     <div class="nav--wrapper">
-      <a href="./index.html" class="png">
-        <img src="./images/sfa.png" alt="Safari">
-    </a>
-    <nav>
-        <div class="nav--icon">
-          <svg xmlns="http://www.w3.org/2002/svg"
-        width="24" height="24" veiwBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor" stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round">
-        <line x1="3" y1="12" x2="21" y2="12" />
-        <line x1="3" y1="6" x2="21" y2="6" />
-        <line x1="3" y1="18" x2="21" y2="18" />
-          </svg>
-        </div>
-       <div class="nav--bg0verlay "></div>
-      <ul class="nav--list ">
-        <div class="nav--close">
-        <svg xmlns="http://www.w3.org/2000/svg"
-        width="24" height="24" veiwBox="0 0 24 24"
-        fill="none"
-        stroke="cureentColor" stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round">
-        <line x1="18" y1="6" x2="6" y2="18" />
-        <line x1="6" y1="6" x2="18" y2="18" />
-     </svg>
-        </div>
-        <div class="nav--list--wrapper">
-            <li><a href="./index.html"
-            class="nav--link">Home</a></li>
-            <li><a href="./Admission.html" 
-            class="nav--link">Admission</a></li>
-            <li><a href="./About.html" 
-            class="nav--link">About Us</a></li>
-        </div>
-      </ul>
-     </nav>
-    </div>
+  <div class="header" data-aos="fade-down" style="position: relative; text-align: center;">
+      <!-- Links positioned absolutely over the image with added margin -->
+      <a href="#home" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin-right: 10px;">Home</a>
+      <a href="#space" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin-right: 10px;">Space</a>
+      <a href="#about" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">About Us</a>
+
+      <!-- The image -->
+      <img src="up.png" style="max-width: 100%; max-height: 100%; display: block;" alt="Header Image">
+  </div>
+
+
+
+<div id="space">
+<div class="stars"></div>
+<div class="stars"></div>
+<div class="stars"></div>
+<div class="stars"></div>
+<div class="stars"></div>
+</div>
+<div class="wrapper">
+<div class="typing-demo">
+this is learning a
+</div>
+  <!-- <div>
+  <img src="center.png" style="max-width:100%;max-height:100%;" alt="Description of the image">
+  </div> -->
+  
+<div id="center-image" style="background-image:url('center.png'); background-repeat:no-repeat; margin-bottom: 100px;">
+<!-- Images up1 and up2 aligned horizontally -->
+  <div style="display: flex; justify-content:space-evenly; ">
+    <img src="need more space.png" style="width: 200px; height: 200px;">
+    <img src="look up.png" style="width: 200px; height: 200px;">
   </div> 
+<!-- Adding the down images in the center -->
+  <div style="display: flex; justify-content: center;">
+    <img src="how it all began.png" style="width: 200px; height: 200px;">
+  </div>
+  
+  <div style="display: flex; justify-content:space-evenly;">
+    <img src="no perfection.png" style="width: 200px; height: 200px;">
+    <img src="little astronauts.png" style="width: 200px; height: 200px;">
+  </div>
 </div>
-<!--End Nav Section-->
-<!--Hero Section -->
-<section id = "hero">
-  <div class="container">
-    <div class="hero--wrapper">
-      <div class="hero--left" data-as="fade-left">
-       <div class="hero--left--wrapper">
-        <h1 class="hero--heading">Safari</h1>
-        <p class="hero--info">Safari academy, the word "safari" is the African Swahii word which means travel. 
-          It is named Safari because learning is like continues travel which never ends.</p>
-       <div class="botton--wrapper">
-        <a href="./About.html"class="btn primary.btn">Explore About Us</a>
-        </div> 
-       </div>
-      </div>
-    </div class="hero--right">
-    <div class="hero--imgWrapper">
-     <img src="./images/Picsart2.png" alt="Picsart 2 img">
-   
-    </div>
-  </div>
-</section>
-<!--End Hero Section-->
-<!--store Info Section-->
-<Section id="storeInfo" data-aos="fade-up">
-  <div class="container">
-    <div class="storeInfo--wrapper">
- <div class="storeInfo--item">
-  <div class="storeInfo--jpg">
-    <img src="images/clok2.jpg"alt="clok">
-  </div>
-  <h3 class="storeInfo--title">
-    8AM- 3PM
-  </h3>
-  <p class="storeInfo--text">
-    opening Hour
-       </p>
-     </div>
-     <div class="storeInfo--item">
-      <div class="storeInfo--jpg">
-        <img src="./images/loc.jpg"alt="loc">
-      </div>
-      <h3 class="storeInfo--title">
-        Addis Ababa, Ethiopia
-      </h3>
-      <p class="storeInfo--text">
-        Address
-           </p>
-         </div>
-         <div class="storeInfo--item">
-          <div class="storeInfo--jpg">
-            <img src="./images/phone.jpg"alt="phone">
-          </div>
-          <h3 class="storeInfo--title">
-            +251(0)116-607203/
-            +251(0)911-469878 
-          </h3>
-          <p class="storeInfo--text">
-            call Now
-               </p>
-             </div>
-    </div>
-  </div>
-</Section>
-<!--End Store Info Section-->
 
-<!-- Footer -->
-<footer>
-  <div class="container">
-<div class="footer--wrapper">
-  <div class="footer--cell">
-    <div class="footer--png">
-      <img src="./images/new kid.png" alt="Safari">
+  <div>
+  <img src="center.png" style="max-width:100%;max-height:100%;" alt="Description of the image">
+  </div>
+<!-- End of Adding the down images in the center -->
+
+   <footer>
+     <div class="header" data-aos="fade-up" style="text-align: center;">
+     <a href="#home">copy right reserved 2023</a>
+        <img src="down.png" style="max-width: 100%; max-height: 100%;" alt="Header Image">
     </div>
-    <p class="footer--desc">
-      "Your Kids are Our Kids!�
-    </p>
-    <div class="footer--socials">
-    <h4 class="footer--socials--title">Follow us</h4>
-    <ol>
-      </li>
-        <a href="#">
-          <svg
-          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="1" stroke-linecap="round" 
-          stroke-linejoin="round">
-        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4v7a1 1 0 0 1 1-1h3z" />
-        </svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://t.me/your-telegram-channel" target="_blank"> <!-- Replace "your-telegram-channel" with your actual Telegram channel URL -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" 
-          stroke="currentColor" stroke-width="1" stroke-linecap="round" 
-          stroke-linejoin="round"
-          class="feather feather-telegram"> <!-- You can also change the class name to "feather-telegram" for clarity -->
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-        </svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.facebook.com/your-facebook-page"> <!-- Replace with your Facebook page URL -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" 
-          stroke="currentColor" stroke-width="1" stroke-linecap="round" 
-          stroke-linejoin="round"
-          class="feather feather-facebook"> <!-- You can change the class name too if needed -->
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/> <!-- Keep the SVG icon as you like -->
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-        </svg>
-        </a>
-      </li>
-   </ol>
-  </div>
- </div>
- <div class="footer--col2">
-  <h3 class="footer--text--title">
-    links
-  </h3>
-  <ol class="footer--text">
-    <li>
-      <a href="./index.html">Home</a>
-    </li>
-    <li>
-      <a href="./Admission.html">Admission</a>
-      <li>
-    <li>
-      <a href="./About.html">About Us</a>
-    </li>
-    <li>
-      <a href="./Privacy Policy.html">Privacy Policy</a>
-    </li>
-  </ol>
- </div>
-<div class="footer--col3">
-  <h3 class="footer--text--title">
-    Contact
-  </h3>
-  <ol class="footer--text">
-    <li>
-      <a href="./tel:*+251(0)116-607203/+251(0)911-469878 ">+251(0)116-607203<br>+251(0)911-469878 </a>
-  </ol>
-  </div>
-</div>
-</div>
-</footer>
-<div id="copyright">
-  <div class="container">
-    <p class="copyright--text">
-      copyright 2023 Safari Academy | All rights reserved
-    </p>
-  </div>
-</div>
-<!-- End Footer-->
-<!-- aos script-->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 <script>
-  AOS.init();
+AOS.init();
 </script>
-<!-- custom script-->
-<script src=".//main.js"></script>
 </body>
-
-</html> 
- 
+</html>
